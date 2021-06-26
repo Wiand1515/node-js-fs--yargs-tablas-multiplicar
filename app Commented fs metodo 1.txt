@@ -1,0 +1,28 @@
+//Destructuramos el objeto tabla para importarlo con require y asignamos la ruta de importacion, esto nos permite ejecutarla sin problemas en nuestro archivo app
+
+/* const {tabla} = require("./helpers/multiply") */
+
+
+/* console.clear(); */
+
+//---------------------------------------------------------------------------------
+//Asignar un valor a una variable por consola metodo 1 (NO RECOMENDADO)
+
+// Destructuramos un array y lo igualamos a process.argv para poder asignar la variable por consola, en este momento de igual manera podemos asignar un valor por defecto en caso de no contar con uno al momento de ejecutar el programa o que el usuario no lo haga.
+
+/* const [ , , arg3 = 'base=1'] = process.argv */
+
+//Destructuramos nuevamente el array para poder ejecutar el elemento con un split y poder aislar el numero en consola, de manera que podamos pasarlo como argumento a la funcion, asignando el nombre al argumento que recibe nuestra funcion. 
+
+/* const [, number = 1] = arg3.split('=');
+console.log( number ); */
+
+//Ejecutamos esta funcion, que ejecutara una tabla de multiplicar y creara un archivo desde la funcion tabla que esta siendo importada de manera de module y trabajando de manera asincrona.
+ 
+//ejecutamos la funcion tabla que fue importada desde un fichero externo a este bloque de codigo
+/* tabla(number) */
+    //Como estamos trabajando con funciones asincronas, podemos utilizar el metodo then el cual ejecutara y esperara a que termine el proceso del archivo que estamos dando indicaciones, en este caso. en caso de tener exito y ejecutar de manera correcta la funcion, se imprimira en consola el nombre del archivo asignado a la funcion, junto con un dialogo de exito
+    /*  .then(nombreArchivo => console.log(nombreArchivo, 'creado')) */
+     //en caso de existir un error en la funcion ejecutaremos el metodo catch el cual hara un console.log del error en cuestion.
+/*      .catch(err => console.log(err)); */
+
